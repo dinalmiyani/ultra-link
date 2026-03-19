@@ -8,6 +8,7 @@ import { TopEventsChart } from "@/features/analytics/components/TopEventsChart";
 import { EventsTable } from "@/features/analytics/components/EventsTable";
 import { generateMockEvents } from "@/lib/mock-data";
 import { Users, Zap, Clock, TrendingUp } from "lucide-react";
+import { WidgetList } from "@/features/dashboard/components/WidgetList";
 
 export default function DashboardPage() {
   const events = useMemo(() => generateMockEvents(100_000), []);
@@ -39,6 +40,7 @@ export default function DashboardPage() {
         </div>
 
         <EventsTable events={events} />
+        <WidgetList />
       </div>
     </>
   );
