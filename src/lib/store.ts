@@ -17,14 +17,9 @@ interface AppStore {
 
 export const useAppStore = create<AppStore>((set) => ({
   sidebarOpen: true,
-  toggleSidebar: () => set((state) => ({sidebarOpen: !state.sidebarOpen})),
-  currentUser: {
-    id: "user-1",
-    name: "Arjun Joshi",
-    email: "arjun@ultralink.dev",
-    color: "#3B8BD4",
-  },
-  setCurrentUser: (user) => set({currentUser: user}),
+  toggleSidebar: () => set((state) => ({ sidebarOpen: !state.sidebarOpen })),
+  currentUser: null,
+  setCurrentUser: (user) => set({ currentUser: user }),
   presentUsers: [],
-  setPresentUsers: (user) => set({presentUsers: user}),
+  setPresentUsers: (user) => set({ presentUsers: user }),
 }))

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import "./globals.css";
-import { Provider } from "./providers";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Ultra-Link Analytics",
@@ -15,9 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Provider>
+        <Providers>
           {children}
-        </Provider>
+        </Providers>
       </body>
     </html>
   );

@@ -9,8 +9,10 @@ import { EventsTable } from "@/features/analytics/components/EventsTable";
 import { generateMockEvents } from "@/lib/mock-data";
 import { Users, Zap, Clock, TrendingUp } from "lucide-react";
 import { WidgetList } from "@/features/dashboard/components/WidgetList";
+import { usePresence } from "@/hooks/usePresence";
 
 export default function DashboardPage() {
+  usePresence("dashboard");   
   const events = useMemo(() => generateMockEvents(100_000), []);
 
   const metrics = [
